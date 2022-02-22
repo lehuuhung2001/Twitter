@@ -34,7 +34,10 @@ const Tweet = (props) => {
   }, []);
 
   if (!twitter) return null;
-
+  const submit = () =>{
+    handleAddTask2();
+    setModalVisible(!modalVisible)
+  }
   return (
     <>
       <AntDesign
@@ -63,7 +66,8 @@ const Tweet = (props) => {
               <Text style={{ fontSize: 16, top: 40 }}>Cancel</Text>
             </Pressable>
             <TouchableOpacity
-              onPress={handleAddTask2}
+              onPress={submit}
+              
               style={{
                 flex: 0.3,
                 backgroundColor: "#8ecdf9",

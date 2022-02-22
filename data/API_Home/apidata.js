@@ -66,13 +66,14 @@ const Apidata = () => {
 
   return (
     <View
-      style={{ backgroundColor: "white", flex: 1, justifyContent: "center" }}
+      style={{ backgroundColor: "white", flex: 1, justifyContent: "center"}}
     >
       <ScrollView
         refreshControl={
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
         }
       >
+      <View style = {{flexDirection: 'column-reverse'}}>
         {taskList.map((item, index) => {
           return (
             <Tweet_Create
@@ -81,9 +82,10 @@ const Apidata = () => {
               number={index + 1}
               OnDeleteTask={() => handleDeleteTask(index)}
             />
+            
           );
         })}
-
+        </View>
         <View>
           <FlatList
             data={twitter.data}
