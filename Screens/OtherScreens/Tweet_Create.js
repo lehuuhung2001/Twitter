@@ -34,9 +34,6 @@ const Tweet_Create = (props) => {
           style={{height: 54, width: 54, borderRadius: 40, marginBottom: 20, left : 16,top: 8}}/>
         <Text style = {{left: 23,top:6,fontWeight: 'bold'}}>{twitter.data.name}</Text>
         <Text style = {{left: 33,top:6, color: "#8e8a8a"}}>@{twitter.data.username}</Text>
-        <Text style={{ left: 17, color: "#8e8a8a" }}>ssssssss
-                        {moment().startOf('minute').fromNow()}
-                      </Text>
         <MaterialCommunityIcons
                         name="dots-horizontal"
                         size={24}
